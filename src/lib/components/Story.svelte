@@ -21,12 +21,12 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 					<img src="/assets/images/window_R.png" alt="Window Left" class="window-door window_R" />
 				</div>
 			</figure>
-			<div class="container_btn">
+			<!-- <div class="container_btn">
 				<a href={`/stories/${story.id}`} class="centered_btn">Discover</a>
 			</div>
 			<div class="story__link__plate">
 				<h2 class="story__link__plate-title">{story.title}</h2>
-			</div>
+			</div> -->
 		</a>
 	</li>
   {/each}
@@ -34,9 +34,11 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
   </ul> 
 <style>
 	.story{
+		display: grid;
+		grid-template-columns: repeat(6,1fr);
 		position: relative;
-		width: 40em;
-		height: 50em;
+		width:100vw;
+		height: 100vh;
 		background-color: blue;
 		margin-top: 5em;
 	}
@@ -56,11 +58,12 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 	/* styling positions wonidos */
 
 	ul li:nth-child(1){
-		position: absolute;
+		/* position: absolute;
 		top: 50%;
-		left: 70%;
-		width: fit-content;
-		background-color: red;
+		left: 70%; */
+		width: max-content;
+		height: max-content;
+		margin: 0;
 
 	}
 /* widons styling */

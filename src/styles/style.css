@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Austral-Sans_Stamp-Regular';
+    font-display: swap;
+    src: url('/assets/fonts/AustralSansStamp-Regular.woff2') format('woff2'),
+        url('/assets/fonts/AustralSansStamp-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
