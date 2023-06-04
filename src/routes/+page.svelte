@@ -39,10 +39,10 @@
 			/>
 			<img id="color_building" src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" />
 
-			<div id="story-windows">
+			<article id="story-windows">
 				<Story stories={data.stories}/>
 
-			</div>
+			</article>
 			<img
 				id="overlay"
 				src="/assets/images/ilojo_bar_bw_3.png"
@@ -96,10 +96,19 @@
 		
 	} */
 	#story-windows{
-		transform: scale(0.5);
-		background-color: blue;
-		z-index: 1;
+		position: relative;
+		display: grid;
+		place-items: center;
+		/* transform: scale(0.4); */
+		background-color: transparent;
+		z-index: 9999;
+		width: 125%;
+		height: 100%;
+		/* display: block;
+		position: absolute; */
 	}
+
+	
 
 	@media(max-width:55rem) {
 		section img {

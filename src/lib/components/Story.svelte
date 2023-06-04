@@ -12,7 +12,7 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 						src={story.thumbnail.url}
 						alt={story.title}
 						class="story__link__frame-image"
-						width="200"
+						width="300"
 						height="auto"
 					/>
 				</div>
@@ -36,60 +36,78 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 	.story{
 		display: grid;
 		grid-template-columns: repeat(6,1fr);
-		position: relative;
-		width:100vw;
-		height: 100vh;
-		background-color: blue;
-		margin-top: 5em;
+		gap: .2em;
+		width: 29%;
+		height: 38.5%;
+		object-fit: cover;
+		object-position: center center;
+		position: absolute;
+		top: 44%;
+		overflow: hidden;
+		/* background-color: blue; */
+		
 	}
+
 	li{
+		position: relative;
+		display: grid;
+		place-items: center;
 		list-style: none;
+		/* background-color: black; */
+		/* margin: .5em;
+		width: fit-content;
+		height: fit-content; */
+		/* height: fit-content; */
 	}
 	.story__link {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: .5em;
 		text-decoration: none;
-		margin: 1em;
-		width: 200px;
+		width:  100%;
+		height: 100%;
+		/* background-color: blue; */
 	}
-	/* styling positions wonidos */
-
-	ul li:nth-child(1){
-		/* position: absolute;
-		top: 50%;
-		left: 70%; */
-		width: max-content;
-		height: max-content;
-		margin: 0;
-
-	}
+	
 /* widons styling */
+.story__link__frame {
+		background-image: url('/assets/images/window_bg.webp');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 0;
+		aspect-ratio: 354/525;
+		position: relative;
+		overflow: hidden;
+		width: 64%;
+		/* width: 70px; */
+		margin-left: .5em;
+	}
+
 .window-door {
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: -93%;
+        left: -11%;
 		transition: transform 1s ease, filter 1s ease;
 	}
 
-	.window_L {
+	.window_L{
 		transform-origin: 16.28%;
-		width: 100px;
-		height: 146px;
+		width: 123%;
+        height: 197%;
 	}
 	.window_R {
 		transform-origin: 86.04%;
-		width: 100px;
-		height: 146px;
+		width: 123%;
+         height: 197%;
 	}
 	.window-doors-container {
-		width: 71%;
-		height: 51%;
+		width: 83%;
+		height: 53%;
 		position: absolute;
-		top: 77%;
-		left: 36%;
+		top: 125%;
+		left: 50%;
 		transform: translate(-50%, -150%);
 		z-index: 2;
 	}
@@ -116,19 +134,43 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		filter: drop-shadow(-10px 6px 5px rgba(0, 0, 0, 0.2));
 	} */
 
-	.story__link__frame {
-		background-image: url('/assets/images/window_bg.webp');
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		margin: 0;
-		aspect-ratio: 354/525;
-		position: relative;
-		overflow: hidden;
-		width: 100px;
+	/* styling positions wonidos  laptop*/
+
+	.story__link .story__link__frame{
+		position: absolute;
+		top: 4%;
+	}
+	ul li:nth-child(1) .story__link{
+		position: absolute;
+		/* top: -2%; */
+	}
+	ul li:nth-child(2) .story__link{
+		position: absolute;
+		/* top: -2%; */
+		left: 9%;
+	}
+	ul li:nth-child(3) .story__link{
+		position: absolute;
+		left: 15%;
+	}
+	ul li:nth-child(4) .story__link{
+		position: absolute;
+		left: 14%;
+	}
+	ul li:nth-child(5) .story__link{
+		position: absolute;
+		left: -1.5%;
+	}
+	ul li:nth-child(6) .story__link{
+		position: absolute;
+		left: -20%;
+	}
+	ul li:nth-child(7) .story__link > .story__link__frame{
+		position: absolute;
+		/* top: 40%; */
+		left: 9%;
 	}
 
-	
 
 	.story__link__frame-content {
 		width: 71%;
