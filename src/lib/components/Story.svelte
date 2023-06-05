@@ -12,8 +12,7 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 						src={story.thumbnail.url}
 						alt={story.title}
 						class="story__link__frame-image"
-						width="300"
-						height="auto"
+						
 					/>
 				</div>
 				<div class="window-doors-container">
@@ -43,9 +42,7 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		object-position: center center;
 		position: absolute;
 		top: 44%;
-		overflow: hidden;
-		/* background-color: blue; */
-		
+		overflow: hidden;		
 	}
 
 	li{
@@ -53,11 +50,6 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		display: grid;
 		place-items: center;
 		list-style: none;
-		/* background-color: black; */
-		/* margin: .5em;
-		width: fit-content;
-		height: fit-content; */
-		/* height: fit-content; */
 	}
 	.story__link {
 		display: flex;
@@ -67,8 +59,7 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		text-decoration: none;
 		width:  100%;
 		height: 100%;
-		/* background-color: blue; */
-	}
+		}
 	
 /* widons styling */
 .story__link__frame {
@@ -81,7 +72,6 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		position: relative;
 		overflow: hidden;
 		width: 64%;
-		/* width: 70px; */
 		margin-left: .5em;
 	}
 
@@ -122,31 +112,92 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		filter: drop-shadow(10px 6px 5px rgba(0, 0, 0, 0.2));
 	}
 
-	/* .story:hover .window_L {
-		transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);
-		-webkit-filter: drop-shadow(10px 6px 5px rgba(0, 0, 0, 0.2));
-		filter: drop-shadow(10px 6px 5px rgba(0, 0, 0, 0.2));
-	}
-
-	.story:hover .window_R {
-		transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
-		-webkit-filter: drop-shadow(-10px 6px 5px rgba(0, 0, 0, 0.2));
-		filter: drop-shadow(-10px 6px 5px rgba(0, 0, 0, 0.2));
-	} */
-
-	/* styling positions wonidos  laptop*/
-
+	/* styling positions wonidos pc */
 	.story__link .story__link__frame{
 		position: absolute;
 		top: 4%;
 	}
 	ul li:nth-child(1) .story__link{
 		position: absolute;
+		left: 10%;
 		/* top: -2%; */
 	}
 	ul li:nth-child(2) .story__link{
 		position: absolute;
 		/* top: -2%; */
+		left: 14%;
+	}
+	ul li:nth-child(3) .story__link{
+		position: absolute;
+		left: 19%;
+	}
+	ul li:nth-child(4) .story__link{
+		position: absolute;
+		left: 14%;
+	}
+	ul li:nth-child(5) .story__link{
+		position: absolute;
+		left: -1.5%;
+	}
+	ul li:nth-child(6) .story__link{
+		position: absolute;
+		left: -20%;
+	}
+	li:nth-child(7) .story__link > .story__link__frame{
+		position: absolute;
+		top: -6%;
+		left: 16%;
+		width: 72%;
+	}
+	li:nth-child(8) .story__link > .story__link__frame{
+		position: absolute;
+		top: -6%;
+		left: 21%;
+		width: 72%;
+	}
+	li:nth-child(9) .story__link > .story__link__frame{
+		position: absolute;
+		top: -6%;
+		left: 27%;
+		width: 72%;
+	}
+
+	.story__link__frame-content {
+		width: 71%;
+		height: 51%;
+		position: absolute;
+		top: 70%;
+		left: 51%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+
+	.story__link__frame-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+		overflow: hidden;
+	}
+	
+	a {
+		text-decoration: none;
+		color: var(--light);
+		font-size: 1.2rem;
+	}
+	
+	@media (max-width: 100em) {
+			/* styling positions wonidos  laptop*/
+	.story__link .story__link__frame{
+		position: absolute;
+		top: 4%;
+	}
+	ul li:nth-child(1) .story__link{
+		position: absolute;
+		left: unset;
+	}
+	ul li:nth-child(2) .story__link{
+		position: absolute;
 		left: 9%;
 	}
 	ul li:nth-child(3) .story__link{
@@ -165,29 +216,47 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		position: absolute;
 		left: -20%;
 	}
-	ul li:nth-child(7) .story__link > .story__link__frame{
+	li:nth-child(7) .story__link > .story__link__frame{
 		position: absolute;
-		/* top: 40%; */
-		left: 9%;
+		top: -3%;
+		left: 7%;
+		width: 72%;
 	}
-
-
-	.story__link__frame-content {
-		width: 71%;
-		height: 51%;
+	li:nth-child(8) .story__link > .story__link__frame{
 		position: absolute;
-		top: 70%;
-		left: 51%;
-		transform: translate(-50%, -50%);
-		z-index: -1;
+		top: -3%;
+		left: 12%;
+		width: 72%;
+	}
+	li:nth-child(9) .story__link > .story__link__frame{
+		position: absolute;
+		top: -3%;
+		left: 20%;
+		width: 72%;
+	}
+	}
+	@media (max-width: 40rem) {
+		.story__link__frame {
+			margin: 0 auto;
+		}
+
+		.story {
+			margin: 1rem 0;
+		}
 	}
 
-	.story__link__frame-image {
-		width: 100%;
-		object-fit: cover;
-		z-index: -1;
+	@media (max-width: 40rem) {
+		.story__link__frame {
+			margin: 0 auto;
+		}
+
+		.story {
+			margin: 1rem 0;
+		}
 	}
-    .story__link__plate{
+	
+	
+    /* .story__link__plate{
 		background-color: #D2B48C;
 		border-radius:.4em;
 		width: 200px;
@@ -215,20 +284,6 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -60%);
-	}
-    a {
-		text-decoration: none;
-		color: var(--light);
-		font-size: 1.2rem;
-	}
-
-	@media (max-width: 40rem) {
-		.story__link__frame {
-			margin: 0 auto;
-		}
-
-		.story {
-			margin: 1rem 0;
-		}
-	}
+	} */
+   
 </style> 
