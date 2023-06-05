@@ -285,5 +285,4 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		left: 50%;
 		transform: translate(-50%, -60%);
 	} */
-   
 </style> 

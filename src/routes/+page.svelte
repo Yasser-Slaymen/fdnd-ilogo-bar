@@ -18,10 +18,10 @@
 				pin: '.ilojo-bar-section'
 			}
 		});
-
 		scrollTL
 			.from('.scroll_cont', { scale: 1 }, '<')
 			.fromTo('#color_building', { opacity: 0 }, { opacity: 1 }, '<')
+			.fromTo('#test', { opacity: 0 }, { opacity: 1 }, '<')
 			.fromTo('#story-windows', { opacity: 0 }, { opacity: 1 }, '<')
 			.fromTo('#background', { opacity: 1 }, { opacity: 0 }, '-=50%')
 			.fromTo('#overlay', { opacity: 1, scale: 1 }, { opacity: 0, scale: 1.05 }, '<25%');
@@ -31,7 +31,6 @@
 <main>
 	<section class="ilojo-bar-section">
 		<div class="scroll_cont">
-			<!-- <img src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" /> -->
 			<img
 				id="background"
 				src="/assets/images/ilojo_bar_bw_1.jpg"
@@ -41,19 +40,24 @@
 
 			<article id="story-windows">
 				<Story stories={data.stories}/>
-
+				<p class="click-story">click window for story reade</p>
 			</article>
 			<img
 				id="overlay"
 				src="/assets/images/ilojo_bar_bw_3.png"
 				alt="Ilojo bar old with environment"
 			/>
-		</div>
 
+		</div>
 	</section>
+	<!-- <article id="test">
+		<h3>click on windo to story reading</h3>
+	</article>
+	 -->
 </main>
 
 <style>
+
 	main {
 		padding: 0;
 		overflow: hidden;
@@ -73,7 +77,6 @@
 		transform-origin: 86% 50%;
 		height: 100%;
 	}
-
 	section img {
 		width: 100%;
 		height: 100%;
@@ -82,7 +85,6 @@
 		display: block;
 		position: absolute;
 	}
-
 	#overlay {
 		transform-origin: 80% 50%;
 	}
@@ -99,30 +101,36 @@
 		position: relative;
 		display: grid;
 		place-items: center;
-		/* transform: scale(0.4); */
 		background-color: transparent;
 		z-index: 9999;
 		width: 125%;
 		height: 100%;
-		/* display: block;
-		position: absolute; */
 	}
+	.click-story{
+		font-family: "Austral-Sans_Stamp-Regular";
+		font-size: 1em;
+		font-weight: normal;
+		margin-bottom: -21%;
+		color: white;
+		animation: moveUp 2s infinite;
 
-	
-
+	}
+	@keyframes moveUp {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-20px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+	}
 	@media(max-width:55rem) {
 		section img {
 			object-position: 62% center !important;
 		}
 	}
 </style>
-
-
-
-
-<!-- <script lang="ts">
-	import Home from '../lib/components/Home.svelte';
-</script>
-<Home /> -->
 
 
