@@ -40,7 +40,7 @@
 
 			<article id="story-windows">
 				<Story stories={data.stories}/>
-				<p class="click-story">click window for story reade</p>
+				<p class="click-story">click on the window to start the story</p>
 			</article>
 			<img
 				id="overlay"
@@ -109,7 +109,7 @@
 	.click-story{
 		font-family: "Austral-Sans_Stamp-Regular";
 		font-size: 1em;
-		font-weight: normal;
+		font-weight:lighter;
 		margin-bottom: -21%;
 		color: white;
 		animation: moveUp 2s infinite;
