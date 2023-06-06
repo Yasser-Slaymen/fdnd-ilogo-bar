@@ -237,13 +237,15 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 	}
 	@media (max-width: 55rem) {
 		.story{
-		display: flex;
+			display: grid;
+		grid-template-columns: repeat(2,1fr);
+		/* display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-		align-items: center;
+		align-items: center; */
 		gap: 2em;
-		width: 55%;
-		height: 30%;
+		width: 40%;
+		height: 100%;
 		/* object-fit: cover;
 		object-position: center center; */
 		/* margin: 3em; */
@@ -252,11 +254,10 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		/* overflow: unset; */
 		overflow-x: scroll;
 		overflow-y: scroll;
-		margin-top: 3em;
-		background-color: rgb(46, 130, 10);		
+		margin-top: 6em;
+		margin-left: 1em;		
 	} 
 	li{
-		background-color: red;
 		width: fit-content;
 		height: 10em;
 		margin: unset;
@@ -264,7 +265,6 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 	.story__link{
 			width: 5em;
 			height: 7em;
-			background-color: aqua;
 			margin: 0 auto;
 		}
 	.story__link .story__link__frame{
