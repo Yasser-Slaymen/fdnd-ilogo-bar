@@ -112,23 +112,30 @@
 		font-weight:lighter;
 		margin-bottom: -21%;
 		color: white;
-		animation: moveUp 2s infinite;
+		animation: moveUp 5s infinite;
 
 	}
 	@keyframes moveUp {
 	0% {
-		transform: translateX(0);
+		transform: scale(0.5);
 	}
 	50% {
-		transform: translateX(-20px);
+		transform: scale(0.9);
 	}
 	100% {
-		transform: translateX(0);
+		transform: scale(0.5);
 	}
 	}
+	
 	@media(max-width:55rem) {
 		section img {
 			object-position: 62% center !important;
+		}
+		#color_building{
+			display: none;
+		}
+		.click-story{
+			display: none;
 		}
 	}
 </style>

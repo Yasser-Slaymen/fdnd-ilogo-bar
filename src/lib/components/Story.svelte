@@ -235,54 +235,55 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		width: 72%;
 	}
 	}
-	@media (max-width: 40rem) {
-		.story__link__frame {
+	@media (max-width: 55rem) {
+		.story{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		gap: 2em;
+		width: 55%;
+		height: 30%;
+		/* object-fit: cover;
+		object-position: center center; */
+		/* margin: 3em; */
+		position: unset;
+		/* top: 40%; */
+		/* overflow: unset; */
+		overflow-x: scroll;
+		overflow-y: scroll;
+		margin-top: 3em;
+		background-color: rgb(46, 130, 10);		
+	} 
+	li{
+		background-color: red;
+		width: fit-content;
+		height: 10em;
+		margin: unset;
+	} 
+	.story__link{
+			width: 5em;
+			height: 7em;
+			background-color: aqua;
 			margin: 0 auto;
 		}
-
-		.story {
-			margin: 1rem 0;
-		}
+	.story__link .story__link__frame{
+	position: unset;
+	top: unset;
+}
+	li:nth-child(n) .story__link > .story__link__frame{
+	position: absolute;
+	top: unset;
+	left: unset;
+	width: 100%;
 	}
-
-	@media (max-width: 40rem) {
-		.story__link__frame {
-			margin: 0 auto;
-		}
-
-		.story {
-			margin: 1rem 0;
-		}
+	.story__link .story__link__frame{
+		position: unset;
+		top: unset;
 	}
-	
-	
-    /* .story__link__plate{
-		background-color: #D2B48C;
-		border-radius:.4em;
-		width: 200px;
+	ul li:nth-child(n) .story__link{
+		position: unset ;
+		left: unset;
+	}	
 	}
-	.story__link__plate-title {
-		font-size: .9rem;
-		padding: .1em;
-		text-decoration: none;
-		text-align: center;
-		color: #7A1006;
-	}
-	.container_btn {
-    position: relative;
-    background-image: url(/assets/images/goldplate.png);
-    background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	object-fit: contain;
-	height: 40px;
-	width: 80px;
-	}
-	.centered_btn {
-        font-size: .8em;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -60%);
-	} */
 </style> 
