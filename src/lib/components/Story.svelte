@@ -20,12 +20,7 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 					<img src="/assets/images/window_R.png" alt="Window Left" class="window-door window_R" />
 				</div>
 			</figure>
-			<!-- <div class="container_btn">
-				<a href={`/stories/${story.id}`} class="centered_btn">Discover</a>
-			</div>
-			<div class="story__link__plate">
-				<h2 class="story__link__plate-title">{story.title}</h2>
-			</div> -->
+			
 		</a>
 	</li>
   {/each}
@@ -287,3 +282,11 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 	}	
 	}
 </style> 
+
+
+<!-- <div class="container_btn">
+				<a href={`/stories/${story.id}`} class="centered_btn">Discover</a>
+			</div>
+			<div class="story__link__plate">
+				<h2 class="story__link__plate-title">{story.title}</h2>
+			</div> -->
