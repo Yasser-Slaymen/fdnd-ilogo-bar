@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	// import { storyId } from '$lib/stores/store';
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
@@ -161,7 +160,6 @@
 		padding-top: 4%;
 		background-color: #7A1006;
 		overflow-x: hidden;
-		/* color: white; */
 	}
 	.story__title{
 		font-family: "Austral-Sans_Stamp-Regular";
@@ -182,8 +180,22 @@
 		padding: 1em;
 		background-color: #801637;
 	}
+	/* content global styling */
+	:global(.story__content p) {
+		margin: 0 auto;
+		width: 85%;
+		padding: 1em 0 1em 0;
+	}
+	:global(.story__content img){
+		width: 85%;
+		height: 25em;
+		object-fit: fill;
+		border-radius: 15px;
+		margin-left: 4.5em;
+	}
+	/* content specifiek styling */
 	:global(.story__content > img:nth-child(2)) {
-		width: 20em;
+		width: 16em;
 		height: 30em;
 		object-fit: fill;
 		border-radius: 15px;
@@ -191,65 +203,63 @@
 	:global(.story__content > img:nth-child(4)) {
 		position: absolute;
 		top: 335px;
-		left: 35%;
-		width: 63%;
+		left: 37%;
+		width: 55%;
 		height: 15em;
 		object-fit: auto;
 		border-radius: 15px;
+		margin-left: unset;
+
 	}
 	:global(.story__content > p:nth-child(1)) {
 		position: absolute;
-		top: 2%;
-		left: 35%;
-		width: 63%;
-		/* background-color: blue; */
+		top: 1%;
+		left: 37%;
+		width: 55%;
+		padding: unset;
+		margin: unset;
 	}
-
 	:global(.story__content > p:nth-child(3)) {
-		margin: 0 auto;
 		margin-top: 3em;
-		margin-bottom: 0;
-		width: 80%;
 	}
-	/* :global(.story__content > img) {
-		width: 100%;
-rgb(173, 173, 177)		height: 30em;
-		border-radius: .5em;
-		object-fit:contain;
-		object-position: center;
-	} */
-	/* .story__content > img:nth-of-type(4){
-		width: 20em;
-		height: 10em;
-		border-radius: .5em;
-} */
-
-/* 
-	:global(.story__content > p:not(:last-child)) {
-		margin-bottom: 1em;
-	} */
-
 	/* responsive */
-	/* @media (min-width: 60em) {
+	@media (max-width: 60em) {
 		.story {
 			display: grid;
 			place-items: center;
-
 		}
 		.story__title{
-		font-size: 40px;
+		font-size: 23px;
+		padding-top: 3em;
 		}
-	
 		.story__content {
 			grid-template-columns: repeat(1, 1fr);
-			width: 70%;
+			width: 95%;
 		}
-		:global(.story__content > img) {
-		width: 90%;
-		height: 70% ;
-		border-radius: .5em;
-		object-fit:fill;
-		object-position: center;
+		:global(.story__content img){
+		margin-left: 7%;
 	}
-	} */
+	/* content specifiek styling */
+	:global(.story__content > img:nth-child(2)) {
+		width: 85%;
+		height: inherit ;
+	}
+	:global(.story__content > img:nth-child(4)) {
+		position: unset;
+		width: 85%;
+		height: inherit;
+		object-fit: fill;
+		border-radius: 15px;
+		margin-left: 7%;
+
+	}
+	:global(.story__content > p:nth-child(1)) {
+		position: unset;
+		width: 85%;
+		margin-left: 7%;
+		margin-bottom: 1em;
+
+	}
+		
+	}
 </style>
