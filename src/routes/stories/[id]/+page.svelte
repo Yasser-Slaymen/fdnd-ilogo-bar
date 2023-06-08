@@ -147,7 +147,6 @@
 </svelte:head>
 
 <section class="story">
-	<!-- <h1 class="story__title"><span>{data.title}</span></h1> -->
 	<h1 class="story__title">{data.title}</h1>
 	<div class="story__content">
 		{@html data.content.html}
@@ -157,58 +156,85 @@
 
 <style>
 	.story {
-		padding: 5em 1em;
-		background-color: #7A1006;
-		/* color: white; */
-	}
-
-
-	.story__content {
-		font-size: 1.5rem;
-		line-height: 2rem;
 		display: grid;
-		grid-template-columns: 1fr;
-		justify-items: center;
-		gap: 2rem;
+		place-items: center;
+		padding-top: 4%;
+		background-color: #7A1006;
+		overflow-x: hidden;
 		/* color: white; */
 	}
 	.story__title{
 		font-family: "Austral-Sans_Stamp-Regular";
-		font-size: 23spx;
+		font-size: 40px;
 		font-weight: normal;
 		line-height: 1.1em;
 		text-align: center;
-		background: linear-gradient(260deg,  #2231E3 0%,#E3C144  100%);
-		-webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+		color: rgb(254, 248, 248);
+		padding: 1em;
 		}
-		:global(.story__content > p) {
-			font-family: "Austral-Sans_Stamp-Regular";
-			background: linear-gradient(260deg, #f0e460 0%, #E1BCEA 100%);
-		-webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+	.story__content {
+		position: relative;
+		font-family: "Austral-Sans_Stamp-Regular";
+		font-size: 1.3em;
+		line-height: 1rem;
+		color: white;
+		width: 63em;
+		padding: 1em;
+		background-color: #801637;
 	}
-	:global(.story__content > img) {
-		width: 100%;
+	:global(.story__content > img:nth-child(2)) {
+		width: 20em;
 		height: 30em;
+		object-fit: fill;
+		border-radius: 15px;
+	}
+	:global(.story__content > img:nth-child(4)) {
+		position: absolute;
+		top: 335px;
+		left: 35%;
+		width: 63%;
+		height: 15em;
+		object-fit: auto;
+		border-radius: 15px;
+	}
+	:global(.story__content > p:nth-child(1)) {
+		position: absolute;
+		top: 2%;
+		left: 35%;
+		width: 63%;
+		/* background-color: blue; */
+	}
+
+	:global(.story__content > p:nth-child(3)) {
+		margin: 0 auto;
+		margin-top: 3em;
+		margin-bottom: 0;
+		width: 80%;
+	}
+	/* :global(.story__content > img) {
+		width: 100%;
+rgb(173, 173, 177)		height: 30em;
 		border-radius: .5em;
 		object-fit:contain;
 		object-position: center;
-	}
-
-	/* :global(.story__content > p:not(:last-child), img:not(:last-child)) {
-		margin-bottom: 1em;
 	} */
+	/* .story__content > img:nth-of-type(4){
+		width: 20em;
+		height: 10em;
+		border-radius: .5em;
+} */
+
+/* 
 	:global(.story__content > p:not(:last-child)) {
 		margin-bottom: 1em;
-	}
+	} */
 
-	@media (min-width: 60em) {
+	/* responsive */
+	/* @media (min-width: 60em) {
 		.story {
 			display: grid;
 			place-items: center;
 
-			/* padding: 5em 15em; */
 		}
 		.story__title{
 		font-size: 40px;
@@ -225,5 +251,5 @@
 		object-fit:fill;
 		object-position: center;
 	}
-	}
+	} */
 </style>
