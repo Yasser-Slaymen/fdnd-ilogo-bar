@@ -1,5 +1,6 @@
 <script lang="ts">
-    export let stories: { title: string, id: number }[] = [];
+  import 'bootstrap/dist/css/bootstrap.min.css';
+  export let stories: { title: string, id: number }[] = [];
   
   </script>
   
