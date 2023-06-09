@@ -1,18 +1,13 @@
-
 <script>
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//   import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-//   import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-//   import {footerlogo} from '../imges/MicrosoftTeams-image.png'
-
+  import 'bootstrap/dist/css/bootstrap.min.css';
 </script>
-   
-<div class=" my-5">
+
+   <div class=" my-5">
     <!-- Footer -->
     <footer class="text-center text-white" style="background-color: black">
       <!-- Grid container -->
       <div class="container">
-        <img class="footer-logo" src="/assets/images/logo-ilojo-bar.webp" alt="log" width="128" height="auto"  >
+        <img class="footer-logo" src="/assets/images/logo-ilojo-barR.webp" alt="log" width="128" height="auto"  >
 
         <!-- Section: Links -->
         <section class="mt-5">
@@ -21,7 +16,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="/about" class="text-white">Home</a>
+                <a href="/" class="text-white">Home</a>
               </h6>
             </div>
             <!-- Grid column -->
@@ -29,7 +24,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Stories</a>
+                <a href="/" class="text-white">Stories</a>
               </h6>
             </div>
             <!-- Grid column -->
@@ -37,7 +32,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">About us</a>
+                <a href="/" class="text-white">About us</a>
               </h6>
             </div>
             <!-- Grid column -->
@@ -45,7 +40,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Help</a>
+                <a href="/" class="text-white">Help</a>
               </h6>
             </div>
             <!-- Grid column -->
@@ -53,7 +48,7 @@
             <!-- Grid column -->
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Contact</a>
+                <a href="/" class="text-white">Contact</a>
               </h6>
             </div>
             <!-- Grid column -->

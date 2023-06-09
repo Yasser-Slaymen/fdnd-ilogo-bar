@@ -1,12 +1,12 @@
 <script lang="ts">
-  import 'bootstrap/dist/css/bootstrap.min.css';
-  export let stories: { title: string, id: number }[] = [];
-  
+    export let stories: { title: string, id: number }[] = [];
+    import 'bootstrap/dist/css/bootstrap.min.css';
+
   </script>
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img src="/assets/images/logo-ilojo-bar.webp"
+        <a class="navbar-brand" href="/"><img src="/assets/images/logo-ilojo-barR.webp"
           alt="Logo Ilojo Bar"
           class="header__link__image"
           width="128"
@@ -36,10 +36,10 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about">About</a>
+              <a class="nav-link" href="/">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="storypage">Help</a>
+              <a class="nav-link" href="/">Help</a>
             </li>
            
             <li class="nav-item">
@@ -53,6 +53,7 @@
     <style>
         nav{
             padding: .2em 3em;
+            /* padding: 0 4em 0 4em; */
             font-weight: 600;
             font-size: 1.2em;
         }
@@ -60,6 +61,7 @@
             color: #f8f9fa;           
             &:hover {
                 color: #00090b;  
+                /* color: #00C6FF;   */
             }
             
         }
@@ -70,23 +72,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.3); 
+  background: rgba(255, 255, 255, 0.3); /* Adjust the alpha value to control transparency */
   backdrop-filter: blur(10px); /* Adjust the pixel value as desired */
   z-index: -1;
 }
      /* Style the dropdown menu */
   .dropdown-menu {
-    background-color: black; 
-    border: none; 
+    background-color: black; /* Set the background color */
+    border: none; /* Remove the border */
     
   }
   /* Style the dropdown items */
   .dropdown-item {
-    color: #fff; 
+    color: #fff; /* Set the text color */
   }
+  /* Style the dropdown item when it's hovered */
   .dropdown-item:hover {
-    background-color: #555; 
+    background-color: #555; /* Set the background color */
   }
+
     </style>
     
     

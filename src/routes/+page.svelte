@@ -2,7 +2,11 @@
 	import HomeHeader from '../lib/components/HomeHeader.svelte';
 	import { gsap } from 'gsap';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
+	import Story from '../lib/components/Story.svelte';
+	import type { PageData } from './$types';
+   export let data: PageData;
+
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		let scrollTL = gsap.timeline({
@@ -35,6 +39,7 @@
 			<img id="color_building" src="/assets/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" />
 
 			<article id="story-windows">
+				<Story stories={data.stories}/>
 				<p class="click-story">click on the window to start the story</p>
 			</article>
 			<img
@@ -45,7 +50,10 @@
 
 		</div>
 	</section>
-	
+	<!-- <article id="test">
+		<h3>click on windo to story reading</h3>
+	</article>
+	 -->
 </main>
 
 <style>
