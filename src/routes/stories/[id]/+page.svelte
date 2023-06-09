@@ -214,7 +214,7 @@
 	}
 	:global(.story__content > p:nth-child(1)) {
 		position: absolute;
-		top: 1%;
+		top: 2%;
 		left: 37%;
 		width: 55%;
 		padding: unset;
