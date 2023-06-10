@@ -1,6 +1,41 @@
-# create-svelte
+# Ilojo-Bar
+![Screenshot 2023-02-22 111045](https://user-images.githubusercontent.com/90189815/220589799-3a818fd7-6d33-4d11-9580-28d52bd2f80b.png)
+- [fdnd](https://nextjs.org/docs) click for live website
+- 
+-[live website](https://fdnd-ilogo-bar.vercel.app/)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## ☸️Kenmerken
+* HTML
+* CSS
+* sviltkit
+* Typscript
+* Figma
+* Hygraph
+* Bootstrap
+
+## 🧭Beschrijven
+Dit repostory voor opleiding fdnd  die ik gebouwd heb met behulp sveltkit
+
+## 🧭Installatie & Gebruik
+* Cloning the repository
+```javascript 
+git clone https://github.com/Yasser-Slaymen/fdnd-ilogo-bar.git
+Moving to the folder
+Install NPM packages
+ npm install
+Run local server
+npm run start
+   
+```
+
+
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
 
 ## Creating a project
 
@@ -14,16 +49,7 @@ npm create svelte@latest
 npm create svelte@latest my-app
 ```
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
 
 ## Building
 
