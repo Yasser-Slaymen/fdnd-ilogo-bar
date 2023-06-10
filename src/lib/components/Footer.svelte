@@ -1,8 +1,4 @@
-<script>
-  import 'bootstrap/dist/css/bootstrap.min.css';
-</script>
-
-   <div class=" my-5">
+<div class=" my-5">
     <!-- Footer -->
     <footer class="text-center text-white" style="background-color: black">
       <!-- Grid container -->

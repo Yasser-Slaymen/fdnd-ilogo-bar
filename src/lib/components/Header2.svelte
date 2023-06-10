@@ -1,7 +1,6 @@
 <script lang="ts">
     export let stories: { title: string, id: number }[] = [];
     import 'bootstrap/dist/css/bootstrap.min.css';
-
   </script>
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
