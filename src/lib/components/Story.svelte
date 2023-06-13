@@ -297,9 +297,3 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 </style> 
 
 
-<!-- <div class="container_btn">
-				<a href={`/stories/${story.id}`} class="centered_btn">Discover</a>
-			</div>
-			<div class="story__link__plate">
-				<h2 class="story__link__plate-title">{story.title}</h2>
-			</div> -->

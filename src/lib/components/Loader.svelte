@@ -1,0 +1,75 @@
+<script>
+    import { onMount } from 'svelte';
+  
+    let showLoader = true;
+  
+    onMount(() => {
+      // Simulating content loading delay
+      setTimeout(() => {
+        showLoader = false;
+      }, 5000);
+    });
+  </script>
+{#if showLoader}
+<div class="containar">
+    <span class="loader"></span>
+</div>
+  
+{/if} 
+  <style>
+    .containar{
+    /* background-color: blue; */
+    display: grid;
+	place-items: center;
+	width: 100%;
+	height: 60vh;
+	margin-top: 0;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+
+    }
+    .loader {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: inline-block;
+      border-top: 4px solid #FFF;
+      border-right: 4px solid transparent;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+      
+    }
+  
+    .loader::after {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border-left: 4px solid #FF3D00;
+      border-bottom: 4px solid transparent;
+      animation: rotation 0.5s linear infinite reverse;
+    }
+  
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  
+    .hidden {
+      display: none;
+    }
+   
+  </style>
+  
+ 
+  
+
+  
