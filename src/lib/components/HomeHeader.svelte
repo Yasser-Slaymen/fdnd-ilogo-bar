@@ -65,14 +65,12 @@
 	color: white;
 }
 /* loader */
-
 .loader{
 	display: grid;
 	place-items: center;
 	width: 600%;
 	height: 60vh;
 	margin-top: -9em;
-
 }
 @media (max-width: 55rem) {
 		h2 {
