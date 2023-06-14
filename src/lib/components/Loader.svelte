@@ -7,7 +7,7 @@
       // Simulating content loading delay
       setTimeout(() => {
         showLoader = false;
-      }, 5000);
+      }, 2000);
     });
   </script>
 {#if showLoader}
@@ -63,9 +63,9 @@
       }
     }
   
-    .hidden {
+    /* .hidden {
       display: none;
-    }
+    } */
    
   </style>
   
