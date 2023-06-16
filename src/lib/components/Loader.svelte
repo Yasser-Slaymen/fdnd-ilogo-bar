@@ -7,7 +7,7 @@
       // Simulating content loading delay
       setTimeout(() => {
         showLoader = false;
-      }, 2000);
+      }, 1000);
     });
   </script>
 {#if showLoader}
@@ -18,15 +18,14 @@
 {/if} 
   <style>
     .containar{
-    /* background-color: blue; */
-    display: grid;
-	place-items: center;
-	width: 100%;
-	height: 60vh;
-	margin-top: 0;
-    backdrop-filter: blur(8px);
-    border-radius: 15px;
-
+      display: grid;
+      place-items: center;
+      width: 500%;
+      height: 100vh;
+      margin-top: 0;
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      overflow: hidden;
     }
     .loader {
       width: 48px;

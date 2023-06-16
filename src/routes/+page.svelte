@@ -57,7 +57,6 @@
 </main>
 
 <style>
-
 	main {
 		padding: 0;
 		overflow: hidden;

@@ -2,8 +2,7 @@
 		import Loader from '$lib/components/Loader.svelte';
 </script>
 <section>
-	<section class="loader"><Loader/>
-	</section>
+	<section class="loader"><Loader/></section>
 	<h2>Welcome to the <br /> Stories of Ilojo Bar</h2>
 	<p>Read exciting stories about Ilojo Bar</p>
 	<button class="moving-button"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-down-lines" width="96" height="96" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -70,7 +69,7 @@
 	place-items: center;
 	width: 600%;
 	height: 60vh;
-	margin-top: -9em;
+	margin-top: -70%;
 }
 @media (max-width: 55rem) {
 		h2 {
