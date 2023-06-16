@@ -245,25 +245,16 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 	}
 	@media (max-width: 55rem) {
 		.story{
-			display: grid;
+		display: grid;
 		grid-template-columns: repeat(2,1fr);
-		/* display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		align-items: center; */
 		gap: 2em;
-		width: 40%;
+		width: 51%;
 		height: 100%;
-		/* object-fit: cover;
-		object-position: center center; */
-		/* margin: 3em; */
 		position: unset;
-		/* top: 40%; */
-		/* overflow: unset; */
-		overflow-x: scroll;
-		overflow-y: scroll;
-		margin-top: 6em;
-		margin-left: 1em;		
+		overflow-x: hidden;
+		overflow-y:scroll;
+		margin-top: 30em;
+		margin-left: 1em;
 	} 
 	li{
 		width: fit-content;
@@ -293,7 +284,25 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 		position: unset ;
 		left: unset;
 	}	
+	/* Hide the scrollbar */
+	.story::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.story::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0); /* Set the background color of the thumb to transparent */
+}
+
+.story::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); /* Set the background color of the track to transparent */
+}
 	}
+
+@media (max-width: 30rem) {
+	.story{
+	display: grid;
+	grid-template-columns: repeat(1,1fr);
+} }
 </style> 
 
 
