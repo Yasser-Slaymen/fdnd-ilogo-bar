@@ -301,7 +301,8 @@ export let stories: { title: string, id: number, thumbnail: { url: string } }[] 
 @media (max-width: 30rem) {
 	.story{
 	display: grid;
-	grid-template-columns: repeat(1,1fr);
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	overflow-x: hidden;
 } }
 </style> 
 
